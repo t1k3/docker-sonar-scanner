@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  sonar-scanner:
+    build: ./dockerfiles/sonar-scanner/.
+    working_dir: /var/www/html
+    entrypoint: sonar-scanner
+    volumes:
+      - ./project:/var/www/html
+    networks:
+      - sonar-scanner-docker-network
+
+networks:
+  sonar-scanner-docker-network:
+    driver: 'bridge'
