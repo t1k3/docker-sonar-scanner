@@ -10,6 +10,15 @@ $ docker-compose -p <projectname> up -d
 $ docker-compose -p <projectname> run --rm sonar-scanner
 ```
 
+Set logging in `phpunit.xml`
+```phpunit.xml
+<logging>
+   <log type="coverage-html" target="./reports/html"/>
+   <log type="coverage-clover" target="./reports/phpunit.coverage.xml"/>
+   <log type="junit" target="./reports/phpunit.junit.xml" logIncompleteSkipped="false"/>
+</logging>
+```
+
 ## sonar-project.properties example
 ```sonar-project.properties
 # Required metadata
