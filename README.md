@@ -13,9 +13,10 @@ $ docker-compose -p <projectname> run --rm sonar-scanner
 Set logging in `phpunit.xml`
 ```phpunit.xml
 <logging>
-   <log type="coverage-html" target="./reports/html"/>
-   <log type="coverage-clover" target="./reports/phpunit.coverage.xml"/>
-   <log type="junit" target="./reports/phpunit.junit.xml" logIncompleteSkipped="false"/>
+   <log type="coverage-html" target="./reports/phpunit/html"/>
+   <log type="coverage-clover" target="./reports/phpunit/coverage.xml"/>
+   <log type="metrics-xml" target="./reports/phpunit/metrics.xml"/>
+	<log type="test-xml" target="./reports/phpunit/logfile.xml"/>
 </logging>
 ```
 
@@ -40,7 +41,6 @@ sonar.language=php
 sonar.sourceEncoding=UTF-8
 
 # Reusing PHPUnit reports
-sonar.php.tests.reportPath=reports/phpunit.junit.xml
 sonar.php.coverage.reportPaths=reports/phpunit.coverage.xml
 sonar.coverage.exclusions=tests/**/*.php
 
