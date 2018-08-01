@@ -12,4 +12,4 @@ RUN unzip "sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip" \
 ENV PATH "/sonar-scanner-${SONAR_SCANNER_VERSION}/bin:${PATH}"
 
 WORKDIR /var/www/html
-CMD sonar-scanner -Dsonar.projectBaseDir=/var/www/html
+ENTRYPOINT ["sonar-scanner", "-Dsonar.projectBaseDir=/var/www/html"]
