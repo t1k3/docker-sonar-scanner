@@ -15,8 +15,8 @@ Set logging in `phpunit.xml`
 <logging>
    <log type="coverage-html" target="./reports/phpunit/html"/>
    <log type="coverage-clover" target="./reports/phpunit/coverage.xml"/>
-   <log type="metrics-xml" target="./reports/phpunit/metrics.xml"/>
-	<log type="test-xml" target="./reports/phpunit/logfile.xml"/>
+   <log type="metrics-xml" target="./reports/phpunit/metrics.xml"/>	
+   <log type="test-xml" target="./reports/phpunit/logfile.xml"/>
 </logging>
 ```
 
